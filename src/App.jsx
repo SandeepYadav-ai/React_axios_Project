@@ -1,21 +1,13 @@
-import { useEffect } from "react";
-import { getPost } from "./api/PostApi";
+//import { useEffect } from "react";
+//import { getPost } from "./api/PostApi";
+import { Posts } from "./component/Posts";
 
 const App = ()=> {
-  //console.log(getPost());
 
-  const getPostData = async()=> {
-    const res  = await getPost();
-    console.log(res);
-    
-  };
-
-  useEffect(()=>{
-    getPostData();
-  },[]);
-  
   return(
-    <h1>hello curd axios</h1>
+    <section className="w-full">
+      <Posts />
+    </section>
   );
 };
 export default App;
